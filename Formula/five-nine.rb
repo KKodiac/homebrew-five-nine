@@ -12,7 +12,11 @@ class FiveNine < Formula
   end
 
   def install
-    bin.install "five-nine"
+    if Hardware::CPU.arm?
+      bin.install "five-nine-aarch64-apple-darwin" => "five-nine"
+    else
+      bin.install "five-nine-x86_64-apple-darwin" => "five-nine"
+    end
   end
 
   test do

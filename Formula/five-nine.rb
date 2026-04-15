@@ -1,14 +1,14 @@
 class FiveNine < Formula
   desc "Claude service status TUI monitor"
   homepage "https://github.com/KKodiac/five-nine"
-  version "0.2.5"
+  version "0.2.6"
 
   if Hardware::CPU.arm?
     url "https://github.com/KKodiac/five-nine/releases/download/v#{version}/five-nine-aarch64-apple-darwin"
-    sha256 "759424e374e4ed626ad4bc41fb0c0cbe30cb5c2d728abbad28539a8b27079053"
+    sha256 "8758d0f116d7f05e736fa884579bb83e4f349b8217dbcdc203ecf980e0cf5654"
   else
     url "https://github.com/KKodiac/five-nine/releases/download/v#{version}/five-nine-x86_64-apple-darwin"
-    sha256 "70b9e03a8fdd1867625a2286cad01d463c3d4aed1e60e206ae3f270c4e9128f9"
+    sha256 "c9b6aa7cd1e9742eb9cd5b41aa00792926aa3c5a25300236287db14d64ace8a7"
   end
 
   def install
